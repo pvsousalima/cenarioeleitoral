@@ -21,7 +21,9 @@ const CandidateComponent = ({name, picture, description}) => {
             borderRadius: '10px',
             alignItems:'center',
             padding: 12,
-            margin: 8
+            margin: 8,
+            boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+            transition: '0.3s'
         }}>
         <div style={{
             width:'120px',
@@ -34,8 +36,17 @@ const CandidateComponent = ({name, picture, description}) => {
             <h4 style={{fontStyle:'italic'}}>{description}</h4>
         </div>
 
-        <div style={{padding: 10}}>
-            <LineChart discrete={true} data={{"2017-05-13": 2, "2017-05-14": 5, "2017-05-15": 1}} />
+        <div style={{padding: 20}}>
+            <LineChart
+                discrete={true}
+                data={{
+                    "13/Ago": 2,
+                    "14/Ago": 5,
+                    "15/Ago": 1,
+                    "16/Ago": 20,
+                    "17/Ago": 10
+                }}
+            />
         </div>
     </div>
     )
