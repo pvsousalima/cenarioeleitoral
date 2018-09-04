@@ -27,12 +27,48 @@ class App extends Component {
                     <div style={{
                         width:'80px',
                         height:'80px',
-                        overflow: 'hidden', 
+                        overflow: 'hidden',
                         borderRadius: '50%'}}>
                         <img
                             style={{height:'100%'}} src={'https://img.jovempan.uol.com.br/uploads/2018/08/jair-bolsonaro.jpg'} />
                     </div>
                     <h3>Bolsonaro</h3>
+                </div>
+            </li>
+            <li>
+                <div style={{
+                    flex:1,
+                    flexDirection: 'row',
+                    backgroundColor:'red',
+                    alignItems:'center'}}>
+
+                    <div style={{
+                        width:'80px',
+                        height:'80px',
+                        overflow: 'hidden',
+                        borderRadius: '50%'}}>
+                        <img
+                            style={{height:'100%'}} src={'https://pbs.twimg.com/profile_images/1029926047788228608/INFVA7Xs_400x400.jpg'} />
+                    </div>
+                    <h3>Ciro Gomes</h3>
+                </div>
+            </li>
+            <li>
+                <div style={{
+                    flex:1,
+                    flexDirection: 'row',
+                    backgroundColor:'red',
+                    alignItems:'center'}}>
+
+                    <div style={{
+                        width:'80px',
+                        height:'80px',
+                        overflow: 'hidden',
+                        borderRadius: '50%'}}>
+                        <img
+                            style={{height:'100%'}} src={'https://images.immedia.com.br//26/26534_2_EL.jpg?c=201808011017'} />
+                    </div>
+                    <h3>Marina Silva</h3>
                 </div>
             </li>
         </ul>
