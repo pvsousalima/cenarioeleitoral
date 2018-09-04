@@ -31,6 +31,6 @@ if __name__ == '__main__':
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, listener)
 
-    with open('filters.txt', 'r') as f:
+    with open('candidatos.txt', 'r') as f:
         track = f.readlines()
         stream.filter(track=track)
