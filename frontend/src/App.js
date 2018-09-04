@@ -7,6 +7,41 @@ import Highcharts from 'highcharts'
 
 ReactChartkick.addAdapter(Highcharts)
 
+const CandidateComponent = ({name, picture, description}) => {
+    return (
+        <div style={{display: 'flex', flexDirection:'row'}}>
+
+        <div style={{
+            display:'flex',
+            flex:1,
+            flexDirection: 'column',
+            backgroundColor:'#f3f4f7',
+            width: '30%',
+            height: '240px',
+            borderRadius: '10px',
+            alignItems:'center',
+            padding: 12,
+            margin: 8
+        }}>
+        <div style={{
+            width:'120px',
+            height:'120px',
+            overflow: 'hidden',
+            borderRadius: '50%'}}>
+            <img style={{height:'100%'}} src={picture} />
+        </div>
+            <h3 style={{color: '#007fdb'}}>{name}</h3>
+            <h4 style={{fontStyle:'italic'}}>{description}</h4>
+        </div>
+
+        <div style={{padding: 10}}>
+            <LineChart discrete={true} data={{"2017-05-13": 2, "2017-05-14": 5, "2017-05-15": 1}} />
+        </div>
+    </div>
+    )
+}
+
+
 class App extends Component {
   render() {
     return (
@@ -16,70 +51,42 @@ class App extends Component {
           <h1 className="App-title">Cenário Eleitoral</h1>
         </header>
 
+        <div style={{padding: 20}}>
+
         <ul style={{listStyle: 'none'}}>
             <li>
-                <div style={{
-                    flex:1,
-                    flexDirection: 'row',
-                    backgroundColor:'red',
-                    alignItems:'center'}}>
-
-                    <div style={{
-                        width:'80px',
-                        height:'80px',
-                        overflow: 'hidden',
-                        borderRadius: '50%'}}>
-                        <img
-                            style={{height:'100%'}} src={'https://img.jovempan.uol.com.br/uploads/2018/08/jair-bolsonaro.jpg'} />
-                    </div>
-                    <h3>Bolsonaro</h3>
-                </div>
+                <CandidateComponent picture='https://img.jovempan.uol.com.br/uploads/2018/08/jair-bolsonaro.jpg'
+                name='Bolsonaro'
+                description='"Minha arma minha vida, Deus acima de todos."'/>
             </li>
-            <li>
-                <div style={{
-                    flex:1,
-                    flexDirection: 'row',
-                    backgroundColor:'red',
-                    alignItems:'center'}}>
 
-                    <div style={{
-                        width:'80px',
-                        height:'80px',
-                        overflow: 'hidden',
-                        borderRadius: '50%'}}>
-                        <img
-                            style={{height:'100%'}} src={'https://pbs.twimg.com/profile_images/1029926047788228608/INFVA7Xs_400x400.jpg'} />
-                    </div>
-                    <h3>Ciro Gomes</h3>
-                </div>
+            <li>
+                <CandidateComponent
+                    picture='https://pbs.twimg.com/profile_images/1029926047788228608/INFVA7Xs_400x400.jpg'
+                    name='Ciro Gomes'
+                    description='"Vou tirar teu nome do SPC"'/>
             </li>
-            <li>
-                <div style={{
-                    flex:1,
-                    flexDirection: 'row',
-                    backgroundColor:'red',
-                    alignItems:'center'}}>
 
-                    <div style={{
-                        width:'80px',
-                        height:'80px',
-                        overflow: 'hidden',
-                        borderRadius: '50%'}}>
-                        <img
-                            style={{height:'100%'}} src={'https://images.immedia.com.br//26/26534_2_EL.jpg?c=201808011017'} />
-                    </div>
-                    <h3>Marina Silva</h3>
-                </div>
+            <li>
+                <CandidateComponent
+                    picture='https://images.immedia.com.br//26/26534_2_EL.jpg?c=201808011017'
+                    name='Marina Silva'
+                    description='"?"'/>
+            </li>
+
+            <li>
+                <CandidateComponent
+                    picture='https://www.diariodocentrodomundo.com.br/wp-content/uploads/2016/01/geraldo-alckmin-1-600x400.jpg'
+                    name='Alckmin'
+                    description='"Se eu for presidente não tem merenda, mas tem picolé de chuchu na sobremesa."'/>
             </li>
         </ul>
 
-        {/* <div style={{marginTop: 20}}>
-        <LineChart discrete={true} data={{"2017-05-13": 2, "2017-05-14": 5, "2017-05-15": 1}} />
-        </div> */}
-        {/* <ColumnChart data={[["Sun", 32], ["Mon", 46], ["Tue", 28]]} /> */}
 
+        {/* <ColumnChart data={[["Sun", 32], ["Mon", 46], ["Tue", 28]]} /> */}
+        </div>
       </div>
-    );
+    )
   }
 }
 
