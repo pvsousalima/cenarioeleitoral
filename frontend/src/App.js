@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
 
 import ReactChartkick, { LineChart, ColumnChart } from 'react-chartkick'
 import Highcharts from 'highcharts'
@@ -10,7 +10,6 @@ ReactChartkick.addAdapter(Highcharts)
 const CandidateComponent = ({name, picture, description}) => {
     return (
         <div style={{display: 'flex', flexDirection:'row'}}>
-
         <div style={{
             display:'flex',
             flex:1,
@@ -52,7 +51,6 @@ const CandidateComponent = ({name, picture, description}) => {
     )
 }
 
-
 class App extends Component {
   render() {
     return (
@@ -93,12 +91,10 @@ class App extends Component {
             </li>
         </ul>
 
-
-        {/* <ColumnChart data={[["Sun", 32], ["Mon", 46], ["Tue", 28]]} /> */}
         </div>
       </div>
     )
   }
 }
 
-export default App;
+export default App
