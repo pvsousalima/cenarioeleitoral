@@ -51,7 +51,7 @@ class App extends Component {
 
         <div style={{display:'flex', flexDirection:'column'}}>
 
-            <StackGrid columnWidth={240}>
+            <StackGrid columnWidth={240} gutterWidth={20}>
                 <CandidateComponent picture='https://img.jovempan.uol.com.br/uploads/2018/08/jair-bolsonaro.jpg'
                 name='Bolsonaro'/>
 
